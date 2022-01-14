@@ -20,10 +20,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [HomeController::class, 'home']);
+Route::get('/home', [HomeController::class, 'home']);
 
 Route::get('/register', [UserController::class, 'goToRegisterPage']);
 
 Route::post('/UserRegistration', [UserController::class, 'RegisterAccount']);
 
 Route::get('/products', [ProductController::class, 'goToProductPage']);
+
+Route::get('/LivingRoomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
+
+Route::get('/BedroomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
+
+Route::get('/KitchenProducts/{id}', [ProductController::class, 'CategorizedProducts']);
+
+Route::get('/BathroomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
+

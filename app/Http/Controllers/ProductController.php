@@ -18,28 +18,62 @@ class ProductController extends Controller
 
         $products = [];
 
+        $counter = 0;
+
         foreach($categories as $category){
             foreach($allProducts as $product){
 
                 if($product->category_id == $category->id){
 
-                    $products[$product->id]['id'] = $product->id;
-                    $products[$product->id]['product_name'] = $product->product_name;
-                    $products[$product->id]['product_category'] = $category->category_name;
-                    $products[$product->id]['product_price'] = $product->price;
-                    $products[$product->id]['color'] = $product->color;
-                    $products[$product->id]['image'] = $product->image;
+                    $products[$counter]['id'] = $product->id;
+                    $products[$counter]['product_name'] = $product->product_name;
+                    $products[$counter]['product_category'] = $category->category_name;
+                    $products[$counter]['product_price'] = $product->price;
+                    $products[$counter]['color'] = $product->color;
+                    $products[$counter]['image'] = $product->image;
 
+                    $counter++;
                 }
             }
         }
 
-        $productSize= sizeof($products);
+        $productSize = sizeof($products);
 
         return view('product')
         ->with('products', $products)
-        ->with('productSize', $productSize);
+        ->with('counter', $counter);
     }
 
+    public function CategorizedProducts($id){
+
+        $category = Category::where('id', $id)->first();
+        $allProducts = Product::all();
+
+        $counter = 0;
+
+        $products = [];
+
+
+        foreach ($allProducts as $product){
+
+            if($product->category_id == $category->id){
+
+                    $products[$counter]['id'] = $counter;
+                    $products[$counter]['product_name'] = $product->product_name;
+                    $products[$counter]['product_category'] = $category->category_name;
+                    $products[$counter]['product_price'] = $product->price;
+                    $products[$counter]['color'] = $product->color;
+                    $products[$counter]['image'] = $product->image;
+
+                    $counter++;
+
+            }
+
+        }
+
+        return view('product')
+        ->with('products', $products)
+        ->with('counter', $counter);
+    }
 
 }
