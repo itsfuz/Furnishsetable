@@ -52,13 +52,7 @@
                 @endauth
 
                 <li>
-                    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
-                    <ul class="collapse list-unstyled" id="productSubmenu">
-                        <li><a href="#">Living Room</a></li>
-                        <li><a href="#">Bedroom</a></li>
-                        <li><a href="#">Kitchen</a></li>
-                        <li><a href="#">Bathroom</a></li>
-                    </ul>
+                    <a href="/products">Product</a>
                 </li>
                 <li><a href="#">Contact Us</a></li>
 
@@ -83,14 +77,21 @@
                         </span>
                       </div>
                 </div>
+                @auth
+                    @if(auth()->user()->id)
+                    <div class="col">
+                        <a href="/logout">Logout</a>
+                    </div>
 
-                <div class="col">
-                    <a href="/login">Login</a>
-                </div>
-                <div class="/register">
-                    <a href="/register">Register</a>
-                </div>
-
+                    @endif
+                    @else
+                    <div class="col">
+                        <a href="/login">Login</a>
+                    </div>
+                    <div class="/register">
+                        <a href="/register">Register</a>
+                    </div>
+                @endauth
 
 
             </nav>
