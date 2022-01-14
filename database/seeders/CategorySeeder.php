@@ -31,6 +31,6 @@ class CategorySeeder extends Seeder
             ]
         ];
 
-        DB::table('product_categories')->insert($product_categories);
+        DB::table('categories')->insert($product_categories);
     }
 }
