@@ -33,7 +33,9 @@
           </div>
           <br><br>
           <button type="submit" class="w-50 btn btn-warning" style="widh: 200px">login</button>
-          <p>Don't have an account? Register <a href="/register">here</a>.</p>
+          <br>
+          <p></p>
+            <p  style="font-size: 12px">Don't have an account? Register <a href="/register" style="color: #D9534F">here</a>.</p>
     </div>
 
     </form>
