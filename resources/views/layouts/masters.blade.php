@@ -10,6 +10,8 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link href="{{ URL::asset('css/furnishsetable.css') }}" rel="stylesheet">
 
@@ -21,13 +23,70 @@
 </head>
 
 <body>
-    @include('layouts.header')
-    <div>
-        <br>
-        @yield('content')
-        <br>
-    </div>
-    @include('layouts.footer')
+<div>
+    <div class="wrapper">
+
+        <nav id="sidebar">
+
+             <div class="sidebar-header">
+                 <img src="{{asset('images/FURNISHSETABLE.png')}}" alt="Furnishsetable" style="width:200px; padding: 10px">
+             </div>
+             <ul class="lisst-unstyled components">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                 <li>
+                     <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
+                   <ul class="collapse list-unstyled" id="categorySubmenu">
+                        <li><a href="#">Bed Room</a></li>
+                        <li><a href="#">Living Room</a></li>
+                        <li><a href="#">Garden</a></li>
+
+                   </ul>
+                 </li>
+
+                 <li>
+                     <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                     <ul class="collapse list-unstyled" id="productSubmenu">
+                         <li><a href="#">Bed</a></li>
+                         <li><a href="#">Chair</a></li>
+                         <li><a href="#">Table</a></li>
+                     </ul>
+                 </li>
+                    <li><a href="#">Contact Us</a></li>
+
+             </ul>
+        </nav>
+
+       <div id="content" style="display:flex; flex-direction:column">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="row">
+                        <button type="button" id="sidebarCollapse" class="btn  btn-warning">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                    </div>
+                </div>
+                    <div class="col">
+                        <a href="/login">Login</a>
+                    </div>
+                    <div class="/register">
+                            <a href="/register">Register</a>
+                    </div>
+            </nav>
+            <div style="display:flex; justify-content:center; margin-top:50px">
+                <br>
+                @yield('content')
+                <br>
+            </div>
+        </div>
+
+</div>
+
+
 
 
 
