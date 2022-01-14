@@ -7,4 +7,11 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
+
+    public function goToProductPage(){
+
+
+
+        return view('product');
+    }
 }
