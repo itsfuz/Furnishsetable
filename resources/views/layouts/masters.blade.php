@@ -39,16 +39,6 @@
                 <li>
                     <a href="/aboutUs">About Us</a>
                 </li>
-<<<<<<< Updated upstream
-
-                 <li>
-                     <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
-                   <ul class="collapse list-unstyled" id="categorySubmenu">
-                        <li><a href="#">Bed Room</a></li>
-                        <li><a href="#">Living Room</a></li>
-                        <li><a href="#">Garden</a></li>
-=======
->>>>>>> Stashed changes
 
                 @auth
 
@@ -85,7 +75,6 @@
 
                     </div>
                 </div>
-<<<<<<< Updated upstream
                 <div>
                     <div class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
@@ -94,35 +83,6 @@
                         </span>
                       </div>
                 </div>
-                    <div class="col">
-                        <a href="/login">Login</a>
-                    </div>
-                    <div class="col">
-                            <a href="/register">Register</a>
-=======
-
-                @auth
-
-                @if (auth()->user()->id)
-
-                <div class="col">
-                    <a href="/logout">Logout</a>
-                </div>
-
-                @endif
-
-                @if (auth()->user() == null)
-                    <div class="col">
-                        <a href="/login">Login</a>
-                    </div>
-                    <div class="/register">
-                        <a href="/register">Register</a>
->>>>>>> Stashed changes
-                    </div>
-
-                @endif
-
-                @endauth
 
                 <div class="col">
                     <a href="/login">Login</a>
