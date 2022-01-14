@@ -25,7 +25,46 @@ class CartController extends Controller
 
         return view('cart')
         ->with('CartItems', $CartItems)
-        ->;
+        ->with('TotalCost', $TotalCost);
 
+    }
+
+    public function addToCart($id){
+
+        $user = auth()->user()->id;
+
+        $findItem = Cart::where('users_id', $user)->where('product_id', $id)->first();
+
+        if($findItem){
+            //jika ada item yang sama didalam cart
+            $itemPrice = Product::find($id)->price;
+
+            $findItem->quantity = $findItem->quantity + 1;
+
+            $findItem->subtotal = $findItem->quantity*$itemPrice;
+
+            $findItem->save();
+        }
+        else{
+            //jika tidak ada item yang sama didalam cart
+            $cart = new Cart();
+
+            $cart->users_id = $user;
+
+            $item = Product::find($id);
+
+            $cart->product_id = $id;
+
+            $cart->quantity = 1;
+
+            $cart->image = $item->image;
+
+            $cart->subtotal = ($item->price*$cart->quantity);
+
+            $cart->save();
+        }
+
+        return redirect()->back()
+        ->with('notification', 'Item Added to Cart!');
     }
 }

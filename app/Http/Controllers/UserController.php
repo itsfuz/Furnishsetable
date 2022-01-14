@@ -15,6 +15,11 @@ class UserController extends Controller
         return view('register');
     }
 
+    public function goToLoginPage(){
+
+        return view('login');
+    }
+
     public function RegisterAccount(Request $request){
 
         $rules = [
@@ -59,7 +64,7 @@ class UserController extends Controller
 
         if($ValidationCheck){
 
-            return redirect('home');
+            return view('home');
         }
         else{
             return back()->with('notification', 'Account Credentials Doesnt Match!');
