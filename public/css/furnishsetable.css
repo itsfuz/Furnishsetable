@@ -45,7 +45,7 @@ a:focus{
 }
 #sidebar ul.components{
 	padding: 20px 0;
-	border-bottom: 1px solid #47748b;
+	border-bottom: 1px solid #D9534F;
 }
 
 #sidebar ul p{
@@ -66,7 +66,7 @@ a:focus{
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
 	color: rgb(0, 0, 0);
-	background: #6d7fcc;
+	background: #8AC4D0;
 }
 
 a[data-toggle="collapse"]{
@@ -83,7 +83,7 @@ a[data-toggle="collapse"]{
 ul ul a{
 	font-size: 0.9em !important;
 	padding-left: 30px !important;
-	background: #6d7fcc;
+	background: #8AC4D0;
 }
 
 #content{
@@ -107,7 +107,7 @@ ul ul a{
 }
 
 .card {
-
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }

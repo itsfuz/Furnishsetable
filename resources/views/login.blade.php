@@ -10,7 +10,7 @@
     <form method="POST" action="/userlogin">
     @csrf
 
-    <div style="padding: 100px">
+    <div style="padding: 50px">
         <div class="form-floating" style="width: 500px; justify-content:center">
             <input type="username" name="username" class="form-control  @error('username') is-invalid @enderror" id="floatingInput" placeholder="poop123" required autocomplete="username" autofocus>
             <label for="floatingInput">Username</label>

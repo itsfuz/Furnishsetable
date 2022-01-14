@@ -36,7 +36,7 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Cart</a>
                 </li>
                  <li>
                      <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
