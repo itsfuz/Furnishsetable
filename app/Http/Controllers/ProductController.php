@@ -58,7 +58,7 @@ class ProductController extends Controller
 
             if($product->category_id == $category->id){
 
-                    $products[$counter]['id'] = $counter;
+                    $products[$counter]['id'] = $product->id;
                     $products[$counter]['product_name'] = $product->product_name;
                     $products[$counter]['product_category'] = $category->category_name;
                     $products[$counter]['product_price'] = $product->price;
