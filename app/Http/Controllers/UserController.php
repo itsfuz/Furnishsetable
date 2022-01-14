@@ -45,4 +45,32 @@ class UserController extends Controller
 
         return view('login')->with('notification', 'Account has been successfully created!');
     }
+
+    public function UserLogin(Request $request){
+
+        $data = [
+
+            'username' => $request->input('username'),
+            'password' => $request->input('password')
+
+        ];
+
+        $ValidationCheck = auth()->attempt($data);
+
+        if($ValidationCheck){
+
+            return redirect('home');
+        }
+        else{
+            return back()->with('notification', 'Account Credentials Doesnt Match!');
+        }
+
+    }
+
+    public function Logout(){
+
+        auth()->logout();
+
+        return view('login');
+    }
 }
