@@ -29,6 +29,8 @@ Route::post('/UserRegistration', [UserController::class, 'RegisterAccount']);
 
 Route::get('/login', [UserController::class, 'goToLoginPage']);
 
+Route::get('/logout', [UserController::class, 'Logout']);
+
 Route::post('/userlogin', [UserController::class, 'UserLogin']);
 
 Route::get('/products', [ProductController::class, 'goToProductPage']);

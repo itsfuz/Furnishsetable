@@ -35,9 +35,11 @@
                 <li>
                     <a href="/home">Home</a>
                 </li>
+
                 <li>
                     <a href="/aboutUs">About Us</a>
                 </li>
+<<<<<<< Updated upstream
 
                  <li>
                      <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
@@ -45,19 +47,30 @@
                         <li><a href="#">Bed Room</a></li>
                         <li><a href="#">Living Room</a></li>
                         <li><a href="#">Garden</a></li>
+=======
+>>>>>>> Stashed changes
 
-                   </ul>
-                 </li>
+                @auth
 
-                 <li>
-                     <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
-                     <ul class="collapse list-unstyled" id="productSubmenu">
-                         <li><a href="#">Bed</a></li>
-                         <li><a href="#">Chair</a></li>
-                         <li><a href="#">Table</a></li>
-                     </ul>
-                 </li>
-                    <li><a href="#">Contact Us</a></li>
+                @if(auth()->user()->id)
+                    <li>
+                        <a href="#">Cart</a>
+                    </li>
+
+                @endif
+
+                @endauth
+
+                <li>
+                    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                    <ul class="collapse list-unstyled" id="productSubmenu">
+                        <li><a href="#">Living Room</a></li>
+                        <li><a href="#">Bedroom</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                        <li><a href="#">Bathroom</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
 
              </ul>
         </nav>
@@ -72,6 +85,7 @@
 
                     </div>
                 </div>
+<<<<<<< Updated upstream
                 <div>
                     <div class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
@@ -85,7 +99,40 @@
                     </div>
                     <div class="col">
                             <a href="/register">Register</a>
+=======
+
+                @auth
+
+                @if (auth()->user()->id)
+
+                <div class="col">
+                    <a href="/logout">Logout</a>
+                </div>
+
+                @endif
+
+                @if (auth()->user() == null)
+                    <div class="col">
+                        <a href="/login">Login</a>
                     </div>
+                    <div class="/register">
+                        <a href="/register">Register</a>
+>>>>>>> Stashed changes
+                    </div>
+
+                @endif
+
+                @endauth
+
+                <div class="col">
+                    <a href="/login">Login</a>
+                </div>
+                <div class="/register">
+                    <a href="/register">Register</a>
+                </div>
+
+
+
             </nav>
             <div style="display:flex; justify-content:center; margin-top:50px">
                 <br>
@@ -95,11 +142,6 @@
         </div>
 
 </div>
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
