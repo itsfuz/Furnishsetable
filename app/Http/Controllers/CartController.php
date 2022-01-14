@@ -10,7 +10,7 @@ class CartController extends Controller
 {
     //
 
-    public function CartPage($id){
+    public function viewCart($id){
 
         $CartItems = Cart::where('users_id', $id)->get();
 
@@ -54,6 +54,8 @@ class CartController extends Controller
             $item = Product::find($id);
 
             $cart->product_id = $id;
+
+            $cart->name = $item->product_name;
 
             $cart->quantity = 1;
 

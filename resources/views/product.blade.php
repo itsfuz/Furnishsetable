@@ -25,4 +25,6 @@
 
 @endfor
 
+<a href="/cart/{{auth()->user()->id}}">View Cart</a>
+
 @endsection

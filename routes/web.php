@@ -43,3 +43,5 @@ Route::get('/BathroomProducts/{id}', [ProductController::class, 'CategorizedProd
 
 Route::get('/addToCart/{id}', [CartController::class, 'addToCart']);
 
+Route::get('/cart/{id}', [CartController::class, 'viewCart']);
+
