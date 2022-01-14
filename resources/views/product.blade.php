@@ -23,8 +23,6 @@
         <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit">Add to Cart</button></a>
     </div>
 
-
 @endfor
-
 
 @endsection
