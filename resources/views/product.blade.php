@@ -23,22 +23,24 @@
 
     <br>
 
-    <div class="row" style="justify-content:center; display:flex">
+
+        <div class="row">
+            @for($i=0; $i<$counter; $i++)
+            <div class="col" style="">
+            <div class="card" style=" align-items:center; width:400px; height:400px;">
+                <a href="/productDetail/{{$products[$i]['id']}}"><img class="card-img-top"  src="{{ Storage::url($products[$i]['image']) }}" alt="Furniture Image" style="padding: 2px; width:270px;"></a>
+                <br>
+                <h5>Product{{$products[$i]['product_name']}}</h5>
+                <h6>{{$products[$i]['product_price']}}</h6>
+                <h6>{{$products[$i]['color']}}</h6>
+                <h6>{{$products[$i]['product_category']}}</h6>
+                <br>
+                <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit">Add to Cart</button></a>
+            </div>
 
 
-        @for($i=0; $i<$counter; $i++)
-
-        <div class="card" style="width:400px; align-items:center">
-            <img src="{{$products[$i]['image']}}" alt="this is for image">
-            <h4>Product{{$products[$i]['product_name']}}</h4>
-            <h5>{{$products[$i]['product_price']}}</h5>
-            <h5>{{$products[$i]['color']}}</h5>
-            <h5>{{$products[$i]['product_category']}}</h5>
-            <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit">Add to Cart</button></a>
         </div>
-
-    @endfor
-
+        @endfor
     </div>
 
 
