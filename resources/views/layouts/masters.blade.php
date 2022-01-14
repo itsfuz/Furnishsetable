@@ -33,11 +33,12 @@
              </div>
              <ul class="lisst-unstyled components">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/home">Home</a>
                 </li>
                 <li>
-                    <a href="#">Cart</a>
+                    <a href="/aboutUs">About Us</a>
                 </li>
+
                  <li>
                      <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
                    <ul class="collapse list-unstyled" id="categorySubmenu">
@@ -68,12 +69,21 @@
                         <button type="button" id="sidebarCollapse" class="btn  btn-warning">
                             <i class="fas fa-align-left"></i>
                         </button>
+
                     </div>
+                </div>
+                <div>
+                    <div class="input-group rounded">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
                 </div>
                     <div class="col">
                         <a href="/login">Login</a>
                     </div>
-                    <div class="/register">
+                    <div class="col">
                             <a href="/register">Register</a>
                     </div>
             </nav>
