@@ -6,7 +6,7 @@
 
     <div class="card">
 
-        <h3>{{$products[$i]['product_name']}}</h3>
+        <h3>Product{{$products[$i]['product_name']}}</h3>
         <h3>{{$products[$i]['product_price']}}</h3>
         <h3>{{$products[$i]['color']}}</h3>
         <h3>{{$products[$i]['product_category']}}</h3>

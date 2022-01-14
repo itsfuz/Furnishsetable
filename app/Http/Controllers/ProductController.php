@@ -28,6 +28,7 @@ class ProductController extends Controller
                     $products[$product->id]['product_category'] = $category->category_name;
                     $products[$product->id]['product_price'] = $product->price;
                     $products[$product->id]['color'] = $product->color;
+                    $products[$product->id]['image'] = $product->image;
 
                 }
             }
