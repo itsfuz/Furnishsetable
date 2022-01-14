@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -26,6 +27,10 @@ Route::get('/register', [UserController::class, 'goToRegisterPage']);
 
 Route::post('/UserRegistration', [UserController::class, 'RegisterAccount']);
 
+Route::get('/login', [UserController::class, 'goToLoginPage']);
+
+Route::post('/userlogin', [UserController::class, 'UserLogin']);
+
 Route::get('/products', [ProductController::class, 'goToProductPage']);
 
 Route::get('/LivingRoomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
@@ -35,4 +40,6 @@ Route::get('/BedroomProducts/{id}', [ProductController::class, 'CategorizedProdu
 Route::get('/KitchenProducts/{id}', [ProductController::class, 'CategorizedProducts']);
 
 Route::get('/BathroomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
+
+Route::get('/addToCart/{id}', [CartController::class, 'addToCart']);
 
