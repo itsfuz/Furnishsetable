@@ -100,11 +100,9 @@
                         @csrf
                         <div class="input-group rounded">
                             <input type="search" name='search' class="form-control rounded" placeholder="Search by ID" aria-label="Search" aria-describedby="search-addon" />
-                            <button type='submit'>
-                                <span class="input-group-text border-0" id="search-addon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-search"></i>
+                              </button>
                         </div>
                     </form>
                 </div>

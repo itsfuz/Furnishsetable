@@ -2,42 +2,57 @@
 
 @section('content')
 
-    <div class="card">
-        <div class="card-header">
-            <h1>Transaction Receipt</h1>
-        </div>
+<div class="container" style="justify-content: center; display:flex">
+    <div class="card" style="width:800px; padding:100px; align-items:center">
+        <h3><b>Transaction Receipt</b></h3>
+        <br>
+        <table class="table" style="border-collapse: collapse; border: none; text-align:left">
+            <tr style="border: none;">
+                <td style="border: none;"><b>Transaction ID: </b>{{$Transaction->id}}</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;"><b>Transaction Date: </b>{{$Transaction->transaction_date}}</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;"><b>Payment Method: </b>{{$Transaction->payment_method}}</td>
+            </tr>
+        </table>
 
-        <div class="upper-content">
-            <h3>{{$Transaction->id}}</h3>
-            <h3>{{$Transaction->transaction_date}}</h3>
-            <h3>{{$Transaction->payment_method}}</h3>
-        </div>
-        {{-- garis lurus panjang memisahkan --}}
-        <div  class="details">
-            @foreach ($TD as $detail)
-                <div>
-                    <h3>{{$detail->product_name}}</h3>
-                </div>
-                <div>
-                    <h3>{{$detail->price}}</h3>
-                </div>
-                <div>
-                    <h3>{{$detail->quantity}}</h3>
-                </div>
-                <div>
-                    <h3>{{$detail->subtotal}}</h3>
-                </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col" style="text-align: center">Price</th>
+                <th scope="col" style="text-align: right">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach ($TD as $detail)
+                <tr>
+                    <td  scope="col">{{$detail->product_name}}</td>
+                    <td  scope="col">{{$detail->price}}</td>
+                    <td  scope="col" style="text-align: center">{{$detail->quantity}}</td>
+                    <td  scope="col" style="text-align: right">{{$detail->subtotal}}</td>
+
+                </tr>
             @endforeach
-        </div>
-
-        {{-- another long line --}}
-
-        <div class="summary">
-            <h2>{{$Total}}</h2>
-        </div>
-
-
+            </tbody>
+            <thead class="thead-light">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th scope="col" style="text-align: center" class="alignright">Total:</th>
+                    <th scope="col" style="text-align: right" class="alignright">{{$Total}}</th>
+                </tr>
+            </thead>
+            <thead></thead>
+          </table>
+          <br><br>
+        <p>Furnishsetable</p>
     </div>
+</div>
+
 
 @endsection
 
