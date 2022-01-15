@@ -35,8 +35,16 @@
             <button type="button" class="btn btn-dark">Previous Item</button>
 
         </div>
+
         <div class="col-md-auto">
-            <a href="/addToCart/{{$products->id}}"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
+            @auth()
+                @if (auth()->user()->id != null)
+                <a href="/addToCart/{{$products->id}}"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
+                @endif
+                @else
+                <a href="/login"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
+
+            @endauth
         </div>
     </div>
 
