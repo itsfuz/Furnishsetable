@@ -52,6 +52,10 @@
                         <a href="/cart/{{auth()->user()->id}}">Cart</a>
                     </li>
 
+                    <li>
+                        <a href="#">Transactions</a>
+                    </li>
+
                 @endif
 
                 @endauth
