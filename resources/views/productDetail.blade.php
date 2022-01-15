@@ -35,6 +35,10 @@
             <a href="/productDetail/{{($products->id)-1}}"><button type="button" class="btn btn-dark">Previous Item</button></a>
 
         </div>
+        <div class="col-md-auto">
+            <a href="/productDetail/{{($products->id)+1}}"><button type="button" class="btn btn-dark">Next Item</button></a>
+
+        </div>
 
         <div class="col-md-auto">
             @auth()

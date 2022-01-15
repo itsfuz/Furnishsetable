@@ -67,3 +67,5 @@ Route::post('/searchbyID', [ProductController::class, 'searchID']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::get('/history', [TransactionController::class, 'viewHistory']);
+
+Route::get('/receipt/{id}', [TransactionController::class, 'viewReceipt']);

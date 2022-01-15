@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container" style="margin-left:60px">
+<div class="container" style="">
 
     <div class="row" style="padding:5px; border-bottom: 1px solid black; display:flex;">
         <div class="col">

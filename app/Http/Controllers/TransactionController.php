@@ -82,6 +82,22 @@ class TransactionController extends Controller
         ->with('Total', $Total);
     }
 
+    public function viewReceipt($id){
+
+        $Transaction = Transaction::find($id);
+        $TD = TransactionDetails::where('transaction_id', $id)->get();
+
+        $Total = 0;
+        foreach ($TD as $t){
+            $Total = $Total + $t->subtotal;
+        }
+
+        return view('/receipt')
+        ->with('Transaction', $Transaction)
+        ->with('TD', $TD)
+        ->with('Total', $Total);
+    }
+
     public function viewHistory(){
 
         $Transactions = Transaction::where('users_id', Auth()->user()->id)->get();
