@@ -8,24 +8,24 @@
         </div>
 
         <div class="upper-content">
-            <h3>Transaction id</h3>
-            <h3>Transaction date</h3>
-            <h3>Payment method</h3>
+            <h3>{{$Transaction->id}}</h3>
+            <h3>{{$Transaction->transaction_date}}</h3>
+            <h3>{{$Transaction->payment_method}}</h3>
         </div>
         {{-- garis lurus panjang memisahkan --}}
         <div  class="details">
-            @foreach ($products as $product)
+            @foreach ($TD as $detail)
                 <div>
-                    <h3>product name</h3>
+                    <h3>{{$detail->product_name}}</h3>
                 </div>
                 <div>
-                    <h3>product price</h3>
+                    <h3>{{$detail->price}}</h3>
                 </div>
                 <div>
-                    <h3>product quantity</h3>
+                    <h3>{{$detail->quantity}}</h3>
                 </div>
                 <div>
-                    <h3>subtotal</h3>
+                    <h3>{{$detail->subtotal}}</h3>
                 </div>
             @endforeach
         </div>
@@ -33,7 +33,7 @@
         {{-- another long line --}}
 
         <div class="summary">
-            <h2>Total Price</h2>
+            <h2>{{$Total}}</h2>
         </div>
 
 

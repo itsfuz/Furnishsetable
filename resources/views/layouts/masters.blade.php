@@ -53,7 +53,7 @@
                     </li>
 
                     <li>
-                        <a href="#">Transactions</a>
+                        <a href="/history">Transactions</a>
                     </li>
 
                 @endif

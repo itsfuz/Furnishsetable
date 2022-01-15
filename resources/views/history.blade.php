@@ -3,13 +3,18 @@
 
 @section('content')
 
-@foreach ($transactions as $transaction)
+<div style="flex-direction:row; display:flex">
+    @foreach ($Transactions as $transaction)
 
-    <a href="/receipt/{{$id}}"><h3>transaction id</h3></a>
-    <h3>transaction date</h3>
-    <h3>payment method</h3>
+    <div class="content"><a href="/receipt/{{$transaction->id}}"><h3>{{$transaction->id}}</h3></a></div>
+    <p>this is supposed to be spaced out</p>
+    <div><h3>{{$transaction->transaction_date}}</h3></div>
+    <p>this is supposed to be spaced out</p>
+    <div><h3>{{$transaction->payment_method}}</h3></div>
 
 @endforeach
+</div>
+
 
 
 @endsection

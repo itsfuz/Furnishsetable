@@ -22,6 +22,8 @@ class TransactionController extends Controller
 
         $Transaction->transaction_date = date('Y-m-d');
 
+        // dd($Transaction->transacti)
+
         $Transaction->payment_method = $request->payment_method;
 
         $Transaction->save();
@@ -58,7 +60,24 @@ class TransactionController extends Controller
             $removeFromCart = Cart::where('users_id', $userID)->first();
         }
 
-        return redirect('/home')
-        ->with('notification', 'Transaction Complete!');
+        $TD = TransactionDetails::where('transaction_id', $Transaction->id)->get();
+        // dd($TD);
+        $Total = 0;
+        foreach ($TD as $t){
+            $Total = $Total + $t->subtotal;
+        }
+
+        return view('/receipt')
+        ->with('Transaction', $Transaction)
+        ->with('TD', $TD)
+        ->with('Total', $Total);
+    }
+
+    public function viewHistory(){
+
+        $Transactions = Transaction::where('users_id', Auth()->user()->id)->get();
+
+        return view('history')
+        ->with('Transactions', $Transactions);
     }
 }
