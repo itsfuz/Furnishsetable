@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\TransactionDetails;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class TransactionController extends Controller
 
         $Transaction->users_id = $userID;
 
-        $Transaction->date = date('Y-m-d');
+        $Transaction->transaction_date = date('Y-m-d');
 
         $Transaction->payment_method = $request->payment_method;
 
@@ -32,12 +33,14 @@ class TransactionController extends Controller
             $TransactionDetail = new TransactionDetails();
 
             $TransactionDetail->transaction_id = $Transaction->id;
-
-            $TransactionDetail->product_id = $item->product_id;
-
+            // $TransactionDetail->product_id = $item->product_id;
             $TransactionDetail->price = $item->price;
+            // $TransactionDetail->image = $item->image;
+            $TransactionDetail->quantity = $item->quantity;
 
-            $TransactionDetail->image = $item->image;
+            $productPrice = Product::where('id', $item->product_id)->first();
+
+            $TransactionDetail->price = $productPrice->price;
 
             $TransactionDetail->subtotal = $item->subtotal;
 

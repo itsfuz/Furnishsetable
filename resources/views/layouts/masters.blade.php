@@ -51,7 +51,7 @@
 
                 @endauth
 
-                <li><a href="contact">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
 
              </ul>
         </nav>
