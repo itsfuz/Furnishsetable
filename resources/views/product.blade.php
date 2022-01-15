@@ -1,8 +1,10 @@
 @extends('layouts.masters')
 
 @section('content')
-<div class="col" style="margin-left:60px">
-    <div class="row" style="">
+
+<div class="container" style="margin-left:60px">
+
+    <div class="row" style="padding:5px; border-bottom: 1px solid black; display:flex;">
         <div class="col">
             <a href="/products">All Products</a>
         </div>
@@ -57,5 +59,10 @@
 
 
 </div>
-
+    <script>
+        $('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+    </script>
 @endsection
