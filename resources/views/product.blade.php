@@ -30,8 +30,8 @@
             <div class="card" style=" align-items:center; width:400px; height:450px;">
                 <a href="/productDetail/{{$products[$i]['id']}}"><img class="card-img-top"  src="{{ Storage::url($products[$i]['image']) }}" alt="Furniture Image" style="padding: 2px; width:200px;"></a>
                 <br>
-                <h5>Product{{$products[$i]['product_name']}}</h5>
-                <h6>{{$products[$i]['product_price']}}</h6>
+                <h5>{{$products[$i]['product_name']}}</h5>
+                <h6>Rp. {{$products[$i]['product_price']}}</h6>
                 <h6>{{$products[$i]['color']}}</h6>
                 <h6>{{$products[$i]['product_category']}}</h6>
                 <br>
