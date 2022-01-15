@@ -59,4 +59,4 @@ Route::get('/productDetail/{id}', [ProductController::class, 'productDetails']);
 
 Route::get('/checkout/{id}', [CartController::class, 'goToCheckoutPage']);
 
-Route::get('/contactus', [ContactusController::class, 'contact']);
+Route::get('/contact', [ContactusController::class, 'contact']);
