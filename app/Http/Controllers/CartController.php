@@ -21,6 +21,8 @@ class CartController extends Controller
             $TotalCost = $TotalCost + $item->subtotal;
         }
 
+        // dd($CartItems);
+
         return view('cart')
         ->with('CartItems', $CartItems)
         ->with('TotalCost', $TotalCost);
@@ -35,7 +37,7 @@ class CartController extends Controller
 
         foreach($CartItems as $item){
 
-            $TotalCost = $TotalCost + $item->price;
+            $TotalCost = $TotalCost + $item->subtotal;
         }
 
         return view('checkout')
@@ -98,7 +100,18 @@ class CartController extends Controller
 
         $SelectedItem->save();
 
-        return redirect()->back();
+        $TotalCost = 0;
+
+        $CartItems = Cart::where('users_id', $user)->get();
+
+        foreach($CartItems as $item){
+
+            $TotalCost = $TotalCost + $item->subtotal;
+        }
+
+        return redirect()->back()
+        ->with('CartItems',$CartItems)
+        ->with('TotalCost', $TotalCost);
     }
 
     public function minusQuantity($id){
@@ -107,7 +120,7 @@ class CartController extends Controller
 
         $SelectedItem = Cart::where('users_id', $user)->where('product_id', $id)->first();
 
-        if($SelectedItem->quantity - 1 == 0){
+        if($SelectedItem->quantity == 1){
 
             $SelectedItem->delete();
         }
@@ -119,6 +132,17 @@ class CartController extends Controller
             $SelectedItem->save();
         }
 
-        return redirect()->back();
+        $CartItems = Cart::where('users_id', $user)->get();
+
+        $TotalCost = 0;
+
+        foreach($CartItems as $item){
+
+            $TotalCost = $TotalCost + $item->subtotal;
+        }
+
+        return redirect()->back()
+        ->with('CartItems',$CartItems)
+        ->with('TotalCost', $TotalCost);
     }
 }

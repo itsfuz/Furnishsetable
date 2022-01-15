@@ -40,6 +40,7 @@
                 <br>
                 @auth()
                 @if (auth()->user()->id != null)
+
                 <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
                 @endif
                 @else

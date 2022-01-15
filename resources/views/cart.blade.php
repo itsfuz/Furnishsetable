@@ -21,8 +21,8 @@
                     <th scope="col">{{$item->quantity}}</th>
                     <th scope="col">{{$item->subtotal}}</th>
                     <th scope="col">
-                        <a href="/minusQuantity/{{$item->id}}"><button type="button">-</button></a>
-                         <a href="/addQuantity/{{$item->id}}"><button type="button">+</button></a>
+                        <a href="/minusQuantity/{{$item->product_id}}"><button type="button">-</button></a>
+                         <a href="/addQuantity/{{$item->product_id}}"><button type="button">+</button></a>
                      </th>
                 </tr>
             </tbody>
@@ -33,7 +33,7 @@
     <div class="col" style="text-align: center; font-size:20px">
         <h1>Total Price: {{$TotalCost}}</h1>
             <div class="col-md-auto">
-                <a href="/checkout/{{auth()->user()->id}}"><button>Checkout</button></a>
+                <a href="/goToCheckout/{{auth()->user()->id}}"><button>Checkout</button></a>
             </div>
     </div>
 </div>
