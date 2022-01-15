@@ -76,4 +76,21 @@ class ProductController extends Controller
         ->with('counter', $counter);
     }
 
+    public function productDetails($id){
+        $products = Product::find($id);
+        $category = Category::all();
+
+        foreach($category as $c){
+            if($c->id == $products->category_id){
+                $categoryName = $c -> name;
+            }
+        }
+            if($products==null){
+                return redirect('/');
+            }
+        return view('productDetail', ['products'=>$products])
+        ->with('products', $products)
+        ->with('categoryName', $categoryName);
+    }
+
 }

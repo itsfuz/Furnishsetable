@@ -4,6 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,3 +52,4 @@ Route::get('/addQuantity/{id}', [CartController::class, 'addQuantity']);
 
 Route::get('/minusQuantity/{id}', [CartController::class, 'minusQuantity']);
 
+Route::get('/productDetail/{id}', [ProductController::class, 'productDetails']);
