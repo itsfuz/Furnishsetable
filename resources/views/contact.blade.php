@@ -3,6 +3,8 @@
 
 @section('content')
 <div class="booba">
+    <br>
+        <h3 style="text-align: center"><b>Contact Us</b></h3>
 <div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
 	<div class="container clearfix">
 		<div class="content grid_12 contactmap dn" id="contact-phone">

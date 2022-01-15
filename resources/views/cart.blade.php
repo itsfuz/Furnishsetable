@@ -2,19 +2,20 @@
 
 @section('content')
 
-    <div class="container" style="align-items:center;  justify-content:center">
+    <div class="container" style="align-items:center;  justify-content:center; display:flex">
         @if ($size == null)
-            <div class="card-header" style="text-align: center; width:1000px">
-                <h2>Shopping Cart</h2>
-            </div>
+
             <div class="card" style="align-items: center; width:1000px;">
+                <div class="card-header" style="text-align: center; width:1000px;">
+                    <h2>Shopping Cart</h2>
+                </div>
                 <br><br>
                 <img src="{{asset('images/cart.png')}}" style="width: 250px"/>
                 <br>
                 <h3 style="color: rgb(255, 153, 0)"><b> Your Shopping Cart is currently Empty :(</b></h3>
                 <br><br>
                 <div class="col-md-auto">
-                    <a href="/products"> <button class="btn btn-warning" type="submit">Shop Now!</button></a>
+                    <a href="/products"> <button class="btn btn-dark" type="submit">Shop Now!</button></a>
                 </div>
                 <br><br>
             </div>
