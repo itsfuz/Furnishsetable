@@ -1,25 +1,43 @@
 @extends('layouts.masters')
 
 @section('content')
-
-@foreach ($CartItems as $item)
-
-    <div class="card">
-        <img src="{{Storage::url($item->image)}}" alt="image" style="padding: 2px; width:200px;">
-        <h5>{{$item->name}}</h5>
-        <h5>{{$item->price}}</h5>
-        <h5>{{$item->quantity}}</h5>
-        <h5>{{$item->subtotal}}</h5>
-        <a href="/addQuantity/{{$item->product_id}}"><button>+</button></a>
-        <a href="/minusQuantity/{{$item->product_id}}"><button>-</button></a>
+<div class="col-md-auto">
+    <div class="container" style="align-items:center">
+        <table class="table">
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Action</th>
+              </tr>
+              <tbody>
+                @foreach ($CartItems as $item)
+                <tr>
+                    <th scope="col"><img src="{{Storage::url($item->image)}}" alt="image" style="width:200px;"></th>
+                    <th scope="col">{{$item->name}}</th>
+                    <th scope="col">{{$item->price}}</th>
+                    <th scope="col">{{$item->quantity}}</th>
+                    <th scope="col">{{$item->subtotal}}</th>
+                    <th scope="col">
+                        <a href="/minusQuantity/{{$item->id}}"><button type="button">-</button></a>
+                         <a href="/addQuantity/{{$item->id}}"><button type="button">+</button></a>
+                     </th>
+                </tr>
+            </tbody>
+            @endforeach
+        </table>
 
     </div>
+    <div class="col" style="text-align: center; font-size:20px">
+        <h1>Total Price: {{$TotalCost}}</h1>
+            <div class="col-md-auto">
+                <a href="/checkout/{{auth()->user()->id}}"><button>Checkout</button></a>
+            </div>
+    </div>
+</div>
 
-
-@endforeach
-
-<h1>Total Price: {{$TotalCost}}</h1>
-
-<a href="/checkout/{{auth()->user()->id}}"><button>Checkout</button></a>
+</div>
 
 @endsection

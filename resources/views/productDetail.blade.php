@@ -1,7 +1,7 @@
 @extends('layouts.masters')
 
 @section('content')
-<div class="col-md-auto">
+<div class="col-md-auto" style="margin-bottom: 50px">
     <div class="card-header  text-center">
         <b>{{$products->product_name}}</b>
     </div>
