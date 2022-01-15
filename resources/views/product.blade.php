@@ -26,7 +26,7 @@
 
     <br>
 
-        <div class="row">
+        <div class="row" style="">
             @for($i=0; $i<$counter; $i++)
             <div class="col" style="">
             <div class="card" style=" align-items:center; width:400px; height:450px;">
