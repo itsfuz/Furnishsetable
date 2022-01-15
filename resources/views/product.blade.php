@@ -38,7 +38,14 @@
                 <br>
                 <h6>{{$products[$i]['product_category']}}</h6>
                 <br>
+                @auth()
+                @if (auth()->user()->id != null)
                 <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
+                @endif
+                @else
+                <a href="/login"><button type="submit" class="btn btn-dark">Add to Cart</button></a>
+
+                @endauth
                 <br>
             </div>
 
