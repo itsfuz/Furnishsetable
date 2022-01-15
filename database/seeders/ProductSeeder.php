@@ -97,6 +97,14 @@ class ProductSeeder extends Seeder
                 'image' => 'product-image/example10.jpg',
                 'price' => 10000,
                 'description' => 'Size: 30x3x30 cm'
+            ],
+            [
+                'product_name' => 'Bed',
+                'category_id' => 2,
+                'color' => 'Brown',
+                'image' => 'product-image/example11.jpg',
+                'price' => 500000,
+                'description' => 'Size: 120x200 cm'
             ]
 
         ];
