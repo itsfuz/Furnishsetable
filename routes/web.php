@@ -64,6 +64,6 @@ Route::post('/checkout', [TransactionController::class, 'createTransaction']);
 
 Route::post('/searchbyID', [ProductController::class, 'searchID']);
 
-Route::get('/contact', [ContactusController::class, 'contact']);
+Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::get('/history', [TransactionController::class, 'viewHistory']);

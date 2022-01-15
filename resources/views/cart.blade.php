@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="container" style="align-items:center">
+    <div class="container" style="align-items:center;  justify-content:center">
         @if ($size == null)
-            <div class="card-header" style="text-align: center">
+            <div class="card-header" style="text-align: center; width:1000px">
                 <h2>Shopping Cart</h2>
             </div>
-            <div class="card" style="align-items: center; width:1000px">
+            <div class="card" style="align-items: center; width:1000px;">
                 <br><br>
                 <img src="{{asset('images/cart.png')}}" style="width: 250px"/>
                 <br>
@@ -53,6 +53,7 @@
             <br>
             <div class="col" style="text-align: center; font-size:20px">
                 <h3>Total Price: Rp. {{$TotalCost}}</h3>
+                <br>
                     <div class="col-md-auto">
                         <a href="/goToCheckout/{{auth()->user()->id}}"><button type="submit" class="btn btn-dark">Checkout</button></a>
                     </div>

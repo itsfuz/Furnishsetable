@@ -7,12 +7,21 @@ use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\TransactionDetails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class TransactionController extends Controller
 {
     //
 
     public function createTransaction(Request $request){
+        $rules = [
+            'payment_method' => 'required'
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails()){
+             return back()->withErrors($validator);
+        }
 
         $userID = auth()->user()->id;
 
