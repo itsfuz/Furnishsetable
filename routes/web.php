@@ -62,4 +62,6 @@ Route::get('/goToCheckout/{id}', [CartController::class, 'goToCheckoutPage']);
 
 Route::post('/checkout', [TransactionController::class, 'createTransaction']);
 
+Route::post('/searchbyID', [ProductController::class, 'searchID']);
+
 Route::get('/contact', [ContactusController::class, 'contact']);

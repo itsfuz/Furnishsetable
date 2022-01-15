@@ -77,6 +77,20 @@ class ProductController extends Controller
     }
 
     public function productDetails($id){
+
+
+        $allProducts = Product::all();
+        $size = sizeof($allProducts);
+
+        if($id == 0){
+
+            $id = $size;
+        }
+        else if($id == $size+1){
+
+            $id = 1;
+        }
+
         $products = Product::find($id);
         $category = Category::all();
 
@@ -91,6 +105,53 @@ class ProductController extends Controller
         return view('productDetail', ['products'=>$products])
         ->with('products', $products)
         ->with('categoryName', $categoryName);
+    }
+
+    public function searchID(Request $request){
+
+        $PID = $request->search;
+
+        $allProducts = Product::all();
+        $size = sizeof($allProducts);
+
+        if($PID > $size || $PID < 1){
+
+            $counter = 0;
+
+            $product = [];
+
+            $products[0]['id'] = 1;
+            $products[0]['product_name'] = 'none';
+            $products[0]['product_category'] = 'none';
+            $products[0]['product_price'] = 0;
+            $products[0]['color'] = 'none';
+            $products[0]['image'] = 'none';
+
+            return view('product')
+            ->with('products', $products)
+            ->with('counter', $counter);
+        }
+
+        $product = Product::where('id', $PID)->first();
+
+        $category = Category::find($product->category_id)->first();
+
+        $counter = 1;
+
+        $category_name = $category->category_name;
+
+        $products = [];
+
+        $products[0]['id'] = $product->id;
+        $products[0]['product_name'] = $product->product_name;
+        $products[0]['product_category'] = $category_name;
+        $products[0]['product_price'] = $product->price;
+        $products[0]['color'] = $product->color;
+        $products[0]['image'] = $product->image;
+
+        return view('product')
+        ->with('products', $products)
+        ->with('counter', $counter);
     }
 
 }

@@ -28,11 +28,11 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-auto">
-            <button type="button" class="btn btn-dark">Back</button>
+            <a href="/products"><button type="button" class="btn btn-dark">Back</button></a>
 
         </div>
         <div class="col-md-auto">
-            <button type="button" class="btn btn-dark">Previous Item</button>
+            <a href="/productDetail/{{($products->id)-1}}"><button type="button" class="btn btn-dark">Previous Item</button></a>
 
         </div>
 
