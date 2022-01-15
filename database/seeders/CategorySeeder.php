@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
                 'category_name' => 'Living Room'
             ],
             [
-                'category_name' => 'BedRoom'
+                'category_name' => 'Bedroom'
             ],
             [
                 'category_name' => 'Kitchen'
