@@ -14,8 +14,6 @@ class CartController extends Controller
 
         $CartItems = Cart::where('users_id', $id)->get();
 
-        $products = Product::all();
-
         $TotalCost = 0;
 
         foreach($CartItems as $item){
@@ -68,5 +66,43 @@ class CartController extends Controller
 
         return redirect()->back()
         ->with('notification', 'Item Added to Cart!');
+    }
+
+    public function addQuantity($id){
+
+        $user = auth()->user()->id;
+
+        $SelectedItem = Cart::where('users_id', $user)->where('product_id', $id)->first();
+
+        $product = Product::find($id);
+
+        $SelectedItem->quantity = $SelectedItem->quantity + 1;
+
+        $SelectedItem->subtotal = $SelectedItem->subtotal + $product->price;
+
+        $SelectedItem->save();
+
+        return redirect()->back();
+    }
+
+    public function minusQuantity($id){
+
+        $user = Auth()->user()->id;
+
+        $SelectedItem = Cart::where('users_id', $user)->where('product_id', $id)->first();
+
+        if($SelectedItem->quantity - 1 == 0){
+
+            $SelectedItem->delete();
+        }
+        else{
+            $SelectedItem->quantity = $SelectedItem->quantity - 1;
+            $item = Product::find($id);
+
+            $SelectedItem->subtotal = $SelectedItem->subtotal - $item->price;
+            $SelectedItem->save();
+        }
+
+        return redirect()->back();
     }
 }

@@ -47,3 +47,7 @@ Route::get('/addToCart/{id}', [CartController::class, 'addToCart']);
 
 Route::get('/cart/{id}', [CartController::class, 'viewCart']);
 
+Route::get('/addQuantity/{id}', [CartController::class, 'addQuantity']);
+
+Route::get('/minusQuantity/{id}', [CartController::class, 'minusQuantity']);
+

@@ -44,7 +44,7 @@
 
                 @if(auth()->user()->id)
                     <li>
-                        <a href="#">Cart</a>
+                        <a href="/cart/{{auth()->user()->id}}">Cart</a>
                     </li>
 
                 @endif

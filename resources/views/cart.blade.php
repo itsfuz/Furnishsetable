@@ -12,6 +12,9 @@
         <h3>{{$item->subtotal}}</h3>
     </div>
 
+    <a href="/addQuantity/{{$item->product_id}}"><button>+</button></a>
+    <a href="/minusQuantity/{{$item->product_id}}"><button>-</button></a>
+
 @endforeach
 
 <h1>Total Price: {{$TotalCost}}</h1>
