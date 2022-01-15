@@ -27,6 +27,22 @@ class CartController extends Controller
 
     }
 
+    public function goToCheckoutPage($id){
+
+        $CartItems = Cart::where('users_id', $id)->get();
+
+        $TotalCost = 0;
+
+        foreach($CartItems as $item){
+
+            $TotalCost = $TotalCost + $item->price;
+        }
+
+        return view('checkout')
+        ->with('TotalCost', $TotalCost)
+        ->with('CartItems', $CartItems);
+    }
+
     public function addToCart($id){
 
         $user = auth()->user()->id;

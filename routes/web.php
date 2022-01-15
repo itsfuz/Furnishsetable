@@ -53,3 +53,5 @@ Route::get('/addQuantity/{id}', [CartController::class, 'addQuantity']);
 Route::get('/minusQuantity/{id}', [CartController::class, 'minusQuantity']);
 
 Route::get('/productDetail/{id}', [ProductController::class, 'productDetails']);
+
+Route::get('/checkout/{id}', [CartController::class, 'goToCheckoutPage']);
