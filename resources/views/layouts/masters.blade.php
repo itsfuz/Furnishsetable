@@ -25,7 +25,6 @@
 <body>
 <div>
     <div class="wrapper">
-
         <nav id="sidebar">
 
              <div class="sidebar-header">
