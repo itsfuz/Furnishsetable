@@ -43,7 +43,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dicta eveniet laudantium sed voluptas illum non maxime vitae asperiores veritatis totam tenetur voluptatem reiciendis, in id vero ipsum. Facere, velit.'
             ],
             [
-                'product_name' => 'Fridge',
+                'product_name' => 'Towel Holder',
                 'category_id' => 4,
                 'color' => 'Army Green',
                 'image' => 'product-image/example4.jpg',
