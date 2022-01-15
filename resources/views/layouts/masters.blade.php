@@ -37,7 +37,7 @@
                 </li>
 
                 <li>
-                    <a href="/aboutUs">About Us</a>
+                    <a href="/products">Product</a>
                 </li>
 
                 @auth
@@ -51,9 +51,6 @@
 
                 @endauth
 
-                <li>
-                    <a href="/products">Product</a>
-                </li>
                 <li><a href="#">Contact Us</a></li>
 
              </ul>

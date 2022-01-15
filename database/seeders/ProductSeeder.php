@@ -49,7 +49,56 @@ class ProductSeeder extends Seeder
                 'image' => 'product-image/example4.jpg',
                 'price' => 10000,
                 'description' => 'Size: 112x56x139 cm'
+            ],
+            [
+                'product_name' => 'Lamp',
+                'category_id' => 5,
+                'color' => 'Beige',
+                'image' => 'product-image/example5.jpg',
+                'price' => 100000,
+                'description' => 'Size: 30x30x30 cm'
+            ],
+            [
+                'product_name' => 'Sofa',
+                'category_id' => 1,
+                'color' => 'Blue',
+                'image' => 'product-image/example6.jpg',
+                'price' => 2000000,
+                'description' => 'Size: 180x80x100 cm'
+            ],
+            [
+                'product_name' => 'Drawer',
+                'category_id' => 2,
+                'color' => 'Navy Blue',
+                'image' => 'product-image/example7.jpg',
+                'price' => 1500000,
+                'description' => 'Size: 85x110x50 cm'
+            ],
+            [
+                'product_name' => 'Cutting Board',
+                'category_id' => 3,
+                'color' => 'Brown',
+                'image' => 'product-image/example8.jpg',
+                'price' => 70000,
+                'description' => 'Size: 45x3x20 cm'
+            ],
+            [
+                'product_name' => 'Bathub',
+                'category_id' => 4,
+                'color' => 'White',
+                'image' => 'product-image/example9.jpg',
+                'price' => 5000000,
+                'description' => 'Size: 182x56x139 cm'
+            ],
+            [
+                'product_name' => 'Clock',
+                'category_id' => 5,
+                'color' => 'Black',
+                'image' => 'product-image/example10.jpg',
+                'price' => 10000,
+                'description' => 'Size: 30x3x30 cm'
             ]
+
         ];
         DB::table('products')->insert($products);
     }

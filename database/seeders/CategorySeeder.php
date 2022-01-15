@@ -28,6 +28,9 @@ class CategorySeeder extends Seeder
             ],
             [
                 'category_name' => 'Bathroom'
+            ],
+            [
+                'category_name' => 'Others'
             ]
         ];
 
