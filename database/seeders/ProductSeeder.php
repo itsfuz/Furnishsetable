@@ -69,7 +69,7 @@ class ProductSeeder extends Seeder
             [
                 'product_name' => 'Drawer',
                 'category_id' => 2,
-                'color' => 'Navy Blue',
+                'color' => 'Red',
                 'image' => 'product-image/example7.jpg',
                 'price' => 1500000,
                 'description' => 'Size: 85x110x50 cm'
