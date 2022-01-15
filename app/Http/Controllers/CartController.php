@@ -21,11 +21,14 @@ class CartController extends Controller
             $TotalCost = $TotalCost + $item->subtotal;
         }
 
+        $size = sizeof($CartItems);
+
         // dd($CartItems);
 
         return view('cart')
         ->with('CartItems', $CartItems)
-        ->with('TotalCost', $TotalCost);
+        ->with('TotalCost', $TotalCost)
+        ->with('size', $size);
 
     }
 

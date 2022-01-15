@@ -41,8 +41,29 @@
                     <a href="/home">Home</a>
                 </li>
 
-                <li>
-                    <a href="/products">Product</a>
+                <li class="">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                  <ul class="collapse list-unstyled" id="homeSubmenu">
+                      <li>
+                          <a href="/products">All Products</a>
+                      </li>
+                      <li>
+                          <a href="/LivingRoomProducts/1">Living Room</a>
+                      </li>
+                      <li>
+                        <a href="/BedroomProducts/2">Bedroom</a>
+                      </li>
+                      <li>
+                        <a href="/KitchenProducts/3">Kitchen</a>
+                      </li>
+                      <li>
+                        <a href="/BathroomProducts/4">Bathroom</a>
+                      </li>
+                      <li>
+                        <a href="/OthersProducts/5">Others</a>
+                      </li>
+
+                  </ul>
                 </li>
 
                 @auth

@@ -15,7 +15,6 @@
 			</div>
 		</div>
 
-
 		<div class="content grid_12 contactmap dn" id="contact-mail">
 			<div class="grid_4">
 				<h2>E-MAIL</h2>
@@ -48,11 +47,10 @@
 
 	</div>
 </div>
-{{-- dibawah ini div punya booba --}}
+
 </div>
 
 
-{{-- dibawah ini tuh cssnya karna external css gabisa --}}
 <style>
 .booba {
 	font-family: 'Open Sans', sans-serif;
@@ -63,18 +61,6 @@
 }
 .dn {
 	display: none;
-}
-a:link {
-	color: #61bb46;
-	text-decoration: none;
-}
-a:hover {
-	color: #61bb46;
-	text-decoration: none;
-}
-a:visited {
-	color: #61bb46;
-	text-decoration: none;
 }
 
 /* Computer */
@@ -118,11 +104,7 @@ a:visited {
 
 }
 
-
-
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
-
-
 
 
 /* Mobile */
@@ -203,7 +185,6 @@ a:visited {
 	border: 1px solid rgba(0,0,0,.1);
 	margin-left: 0;
 }
-
 .contactmap .information span {
 	font-weight: bold;
 }
@@ -279,7 +260,6 @@ footer hr {
 	margin: 0;
 	padding: 0;
 }
-
 #contact-mailClick.active div {
 	left: -440px !important;
 }
@@ -291,11 +271,7 @@ footer hr {
 }
 </style>
 
-
-
-{{-- ini tuhjavascriptnya karna external javascript does not work like at all --}}
 <script>
-
 //google map
 var map;
   function initialize() {
