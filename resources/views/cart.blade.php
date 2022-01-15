@@ -5,7 +5,7 @@
 @foreach ($CartItems as $item)
 
     <div class="card">
-        <img src="{{$item->image}}" alt="image">
+        <img src="{{Storage::url($item->image)}}" alt="image">
         <h3>{{$item->name}}</h3>
         <h3>{{$item->price}}</h3>
         <h3>{{$item->quantity}}</h3>
