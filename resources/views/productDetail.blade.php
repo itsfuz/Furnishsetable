@@ -2,10 +2,11 @@
 
 @section('content')
 <div class="col-md-auto">
-    <div class="card" style="width: 1000px; height:550px">
-        <div class="card-header  text-center" >
-            <b>{{$products->product_name}}</b>
-        </div>
+    <div class="card-header  text-center">
+        <b>{{$products->product_name}}</b>
+    </div>
+    <div class="card" style="width: 1000px; height:500px">
+
         <br>
             <div class="row justify-content-around" style=" align-items:center">
 
