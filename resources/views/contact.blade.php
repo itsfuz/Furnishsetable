@@ -1,7 +1,10 @@
 @extends('layouts.masters')
+<link rel="resources\css\contact.scss" href="resources\css\contact.scss">
 
 @section('content')
-<div class="container">
+<div>
+    <link rel="contact.scss" href="resources\css\contact.scss">
+    <div class="container">
     <div class="row justify-content-center">
         <div class="container">
             <div class="form-container">
@@ -36,5 +39,7 @@
             </div>
           </div>
     </div>
+    </div>
 </div>
+
 @endsection
