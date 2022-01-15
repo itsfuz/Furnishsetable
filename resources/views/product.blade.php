@@ -18,6 +18,9 @@
        <div class="col">
         <a href="/BathroomProducts/4">Bathroom</a>
        </div>
+       <div class="col">
+        <a href="/OthersProducts/5">Others</a>
+       </div>
 
     </div>
 
@@ -40,7 +43,7 @@
 
 
         </div>
-        @endfor
+            @endfor
     </div>
 
 
