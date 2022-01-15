@@ -33,8 +33,9 @@
                 <a href="/productDetail/{{$products[$i]['id']}}"><img class="card-img-top"  src="{{ Storage::url($products[$i]['image']) }}" alt="Furniture Image" style="padding: 2px; width:200px;"></a>
                 <br>
                 <h5><a href="/productDetail/{{$products[$i]['id']}}">{{$products[$i]['product_name']}}</a></h5>
+                <br>
                 <h6>Rp. {{$products[$i]['product_price']}}</h6>
-                <h6>{{$products[$i]['color']}}</h6>
+                <br>
                 <h6>{{$products[$i]['product_category']}}</h6>
                 <br>
                 <a href="/addToCart/{{$products[$i]['id']}}"><button type="submit" class="btn btn-dark">Add to Cart</button></a>

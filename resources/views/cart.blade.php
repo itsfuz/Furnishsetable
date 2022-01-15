@@ -20,4 +20,6 @@
 
 <h1>Total Price: {{$TotalCost}}</h1>
 
+<a href="/checkout/{{auth()->user()->id}}"><button>Checkout</button></a>
+
 @endsection
