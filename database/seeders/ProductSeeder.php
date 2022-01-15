@@ -23,24 +23,24 @@ class ProductSeeder extends Seeder
                 'category_id' => 1,
                 'color' => 'White',
                 'image' => 'product-image/example1.jpg',
-                'price' => 13000,
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, omnis?'
+                'price' => 799000,
+                'description' => 'Size: 125x75 cm'
             ],
             [
                 'product_name' => 'Bed Frame',
                 'category_id' => 2,
-                'color' => 'Brown',
+                'color' => 'White',
                 'image' => 'product-image/example2.jpg',
-                'price' => 20000,
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fuga qui accusantium numquam modi veritatis et quam nemo, sint sed!'
+                'price' => 2599000,
+                'description' => 'Size: 120x200 cm'
             ],
             [
-                'product_name' => 'Tudung Saji',
+                'product_name' => 'Kitchen Sink',
                 'category_id' => 3,
-                'color' => 'Black',
+                'color' => 'Silver',
                 'image' => 'product-image/example3.jpg',
-                'price' => 15000,
-                'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dicta eveniet laudantium sed voluptas illum non maxime vitae asperiores veritatis totam tenetur voluptatem reiciendis, in id vero ipsum. Facere, velit.'
+                'price' => 2594000,
+                'description' => 'Size: 112x56x139 cm'
             ],
             [
                 'product_name' => 'Towel Holder',
@@ -48,7 +48,7 @@ class ProductSeeder extends Seeder
                 'color' => 'Army Green',
                 'image' => 'product-image/example4.jpg',
                 'price' => 10000,
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta facilis similique ratione necessitatibus a.'
+                'description' => 'Size: 112x56x139 cm'
             ]
         ];
         DB::table('products')->insert($products);
