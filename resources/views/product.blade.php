@@ -1,8 +1,8 @@
 @extends('layouts.masters')
 
 @section('content')
-<div class="col">
-    <div class="row">
+<div class="col" style="margin-left:60px">
+    <div class="row" style="">
         <div class="col">
             <a href="/products">All Products</a>
         </div>
@@ -22,7 +22,6 @@
     </div>
 
     <br>
-
 
         <div class="row">
             @for($i=0; $i<$counter; $i++)
