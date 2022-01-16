@@ -5,11 +5,8 @@
     <div class="container" style="align-items:center;  justify-content:center; display:flex">
         @if ($size == null)
 
-            <div class="card" style="align-items: center; width:1000px;">
-                <div class="card-header" style="text-align: center; width:1000px;">
-                    <h2><b>Shopping Cart</b></h2>
-                </div>
-                <br><br>
+            <div class="card" style="align-items: center; width:1000px;  box-shadow: 5px 5px 10px grey">
+                <br><br><br>
                 <img src="{{asset('images/cart.png')}}" style="width: 250px"/>
                 <br>
                 <h3 style="color: rgb(255, 153, 0)"><b> Your Shopping Cart is currently Empty :(</b></h3>
@@ -56,7 +53,7 @@
                     <h3>Total Price: Rp. {{$TotalCost}}</h3>
                     <br>
                         <div class="col-md-auto">
-                            <a href="/goToCheckout/{{auth()->user()->id}}"><button type="submit" class="btn btn-dark">Checkout</button></a>
+                            <a href="/goToCheckout/{{auth()->user()->id}}"><button type="submit" class="btn btn-dark">Order Items</button></a>
                         </div>
                 </div>
                 <br><br>

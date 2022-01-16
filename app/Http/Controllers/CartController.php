@@ -76,8 +76,6 @@ class CartController extends Controller
 
             $cart->name = $item->product_name;
 
-            $cart->name = $item->price;
-
             $cart->quantity = 1;
 
             $cart->image = $item->image;

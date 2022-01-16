@@ -41,7 +41,8 @@ class ProductController extends Controller
 
         return view('product')
         ->with('products', $products)
-        ->with('counter', $counter);
+        ->with('counter', $counter)
+        ->with('productSize', $productSize);
     }
 
     public function CategorizedProducts($id){

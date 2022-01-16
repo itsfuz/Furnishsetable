@@ -85,9 +85,11 @@
         </div>
         <br>
         <div class="col-md-auto">
-            <a href=""><button type="submit" class="btn btn-dark">Checkout</button></a>
+          <button type="submit" class="btn btn-dark">Checkout</button>
         </div>
     </div>
+    <br>
+    <br>
 </div>
 
 @endsection

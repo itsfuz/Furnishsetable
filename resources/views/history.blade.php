@@ -6,11 +6,8 @@
 <div class="container"  style="align-items:center;  justify-content:center; display:flex">
     @if ($size == null)
 
-    <div class="card" style="align-items: center; width:1000px;">
-        <div class="card-header" style="text-align: center; width:1000px;">
-            <h2><b>Transaction History</b></h2>
-        </div>
-        <br><br>
+    <div class="card" style="align-items: center; width:1000px; box-shadow: 5px 5px 10px grey">
+        <br><br><br>
         <img src="{{asset('images/no-transaction.png')}}" style="width: 250px"/>
         <br>
         <h3 style="color: rgb(255, 153, 0)"><b> You have no transactions.</b></h3>
