@@ -3,11 +3,9 @@
 @section('content')
 
 <div class="container">
-
     <h1 style="text-align: center"><b>Order Summary</b></h1>
     <br>
     <br>
-
     <div class="card" style="text-align: center">
         <table class="table">
             <thead class="thead-dark">
@@ -28,69 +26,74 @@
                     <th scope="col">Rp. {{$item->price}}</th>
                     <th scope="col">{{$item->quantity}}</th>
                     <th scope="col">Rp. {{$item->subtotal}}</th>
-
                 </tr>
             </tbody>
             @endforeach
         </table>
-
     </div>
-    <div class="col" style="text-align: center">
-        <h3>Total Price: {{$TotalCost}}</h3>
-        <br>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form action="/checkout" method="post">
-                    @csrf
 
+        <div class="col" style="text-align: center">
+            <h3>Total Price: {{$TotalCost}}</h3>
+            <br>
+        </div>
+            <form action="/checkout" method="post">
+                @csrf
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                            <div class="col-md-auto @error('payment_method') is-invalid @enderror" style="text-align: center">
+                                <label for="payment_method" class=" col-form-label text-md-end"><b>{{ __('Payment Method') }}</b>:</label>
+                            </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="Credit">
+                                    <label class="form-check-label" for="payment_method">Credit</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="Debit">
+                                    <label class="form-check-label" for="payment_method">Debit</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="GOPAY">
+                                    <label class="form-check-label" for="payment_method">GOPAY</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="OVO">
+                                    <label class="form-check-label" for="payment_method">OVO</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                                @error('payment_method')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+
+                            @if (session()->has('notification'))
+                            <div class="alert alert-danger" role="alert" style="text-align: center">
+                                {{ session('notification') }}
+                              </div>
+
+                            @endif
+                    <br><br>
+                </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-auto @error('payment_method') is-invalid @enderror">
-                            <label for="payment_method" class=" col-form-label text-md-end"><b>{{ __('Payment Method') }}</b>:</label>
+                        <div class="col-md-auto" style="align-items: center">
+                            <button type="submit" class="btn btn-dark">Checkout</button>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-auto">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="Credit">
-                                <label class="form-check-label" for="payment_method">Credit</label>
-                            </div>
-                        </div>
-                        <div class="col-md-auto">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="Debit">
-                                <label class="form-check-label" for="payment_method">Debit</label>
-                            </div>
-                        </div>
-                        <div class="col-md-auto">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="GOPAY">
-                                <label class="form-check-label" for="payment_method">GOPAY</label>
-                            </div>
-                        </div>
-                        <div class="col-md-auto">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="payment_method" id="payment_method" value="OVO">
-                                <label class="form-check-label" for="payment_method">OVO</label>
-                            </div>
-                        </div>
-                            @error('payment_method')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                    </div>
-                    <br>
-                    {{-- /form tadinya disini --}}
-            </div>
-        </div>
-        <br>
-        <div class="col-md-auto">
-          <button type="submit" class="btn btn-dark">Checkout</button>
-        </div>
-    </form>
-    </div>
-    <br>
-    <br>
+                 <br>
+            </form>
+    <br><br>
 </div>
 
 @endsection

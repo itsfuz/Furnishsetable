@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container" style="justify-content: center; display:flex">
-    <div class="card" style="width:800px; padding:100px; align-items:center">
+    <div class="card" style="width:800px; padding:100px; align-items:center;  box-shadow: 5px 5px 10px grey">
         <h3><b>Transaction Receipt</b></h3>
         <br>
         <table class="table" style="border-collapse: collapse; border: none; text-align:left">

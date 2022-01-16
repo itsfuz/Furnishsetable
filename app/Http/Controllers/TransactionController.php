@@ -20,7 +20,8 @@ class TransactionController extends Controller
 
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
-             return back()->withErrors($validator);
+             return back()->withErrors($validator)
+             ->with('notification', 'Payment Method is required!');
         }
 
         $userID = auth()->user()->id;

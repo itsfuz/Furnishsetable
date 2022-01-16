@@ -4,18 +4,19 @@
 
 @if (session()->has('notification'))
 <br>
-    <div classs="container p-5">
-        <div class="row no-gutters fixed-top justify-content-center">
-            <div class="col-lg-6 col-md-12 m-auto">
+    <div classs="container">
+        <div class="row no-gutters fixed-top justify-content-center" style="padding:30px">
+            <div class="col-sm-3">
                 <div class="alert alert-success fade show" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="True">&times;</span>
                       </button>
-                     <h4 class="alert-heading" style="text-align: center">{{ session('notification') }}</h4>
+                     <p class="alert-heading" style="text-align: center">{{ session('notification') }}</p>
                 </div>
             </div>
         </div>
     </div>
+
 @endif
 
 <div class="col-md-auto" style="margin-bottom: 50px">
