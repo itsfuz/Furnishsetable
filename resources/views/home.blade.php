@@ -5,7 +5,7 @@
 <div class="container" style="display: flex;justify-content:center">
 
     <div class="col-md-auto">
-        <div class="card" style="width: 800px; height: 500px;" >
+        <div class="card" style="width: 820px; height: 500px;" >
             <div class="card-header  text-center">
                 <h1 style="color:Tomato;"><b>On Sale!</b></h1>
             </div>
