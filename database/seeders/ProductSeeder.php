@@ -68,7 +68,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'product_name' => 'Drawer',
-                'category_id' => 2,
+                'category_id' => 1,
                 'color' => 'Red',
                 'image' => 'product-image/example7.jpg',
                 'price' => 1500000,
@@ -99,7 +99,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Size: 30x3x30 cm'
             ],
             [
-                'product_name' => 'Bed',
+                'product_name' => 'Bed Frame 2',
                 'category_id' => 2,
                 'color' => 'Brown',
                 'image' => 'product-image/example11.jpg',

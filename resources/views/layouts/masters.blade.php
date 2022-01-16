@@ -15,6 +15,9 @@
 
     <link href="{{ URL::asset('css/furnishsetable.css') }}" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap" rel="stylesheet">
      <!-- Font Awesome JS -->
      {{-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script> --}}
@@ -33,7 +36,18 @@
         <nav id="sidebar">
 
              <div class="sidebar-header">
-                 <img src="{{asset('images/FURNISHSETABLE.png')}}" alt="Furnishsetable" style="width:200px; padding: 10px">
+                 <img src="{{asset('images/FURNISHSETABLE.png')}}" alt="Furnishsetable" style="width:200px; padding: 10px;">
+             </div>
+             @auth
+                @if (auth()->user()->id)
+                <div style="padding: 20px; background-color:#ECAC5D; text-align:center; color:black;">
+                   <b> Welcome, {{auth()->User()->username}}</b>
+                </div>
+                @endif
+             @endauth
+
+             <div>
+
              </div>
              <ul class="lisst-unstyled components">
                 <li>
@@ -106,6 +120,7 @@
                         </div>
                     </form>
                 </div>
+
                 @auth
                     @if(auth()->user()->id)
                     <div class="col">

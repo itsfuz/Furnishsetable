@@ -10,22 +10,24 @@
 
     <div class="card" style="text-align: center">
         <table class="table">
-            <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Subtotal</th>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Subtotal</th>
+                  </tr>
+            </thead>
 
-              </tr>
               <tbody>
                 @foreach ($CartItems as $item)
-                <tr>
+                <tr style="align-items: center">
                     <th scope="col"><img src="{{Storage::url($item->image)}}" alt="image" style="width:200px;"></th>
                     <th scope="col">{{$item->name}}</th>
-                    <th scope="col">{{$item->price}}</th>
+                    <th scope="col">Rp. {{$item->price}}</th>
                     <th scope="col">{{$item->quantity}}</th>
-                    <th scope="col">{{$item->subtotal}}</th>
+                    <th scope="col">Rp. {{$item->subtotal}}</th>
 
                 </tr>
             </tbody>

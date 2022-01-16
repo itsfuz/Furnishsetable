@@ -3,7 +3,24 @@
 
 @section('content')
 
-<div class="container"  style="align-items:center;  justify-content:center">
+<div class="container"  style="align-items:center;  justify-content:center; display:flex">
+    @if ($size == null)
+
+    <div class="card" style="align-items: center; width:1000px;">
+        <div class="card-header" style="text-align: center; width:1000px;">
+            <h2><b>Transaction History</b></h2>
+        </div>
+        <br><br>
+        <img src="{{asset('images/no-transaction.png')}}" style="width: 250px"/>
+        <br>
+        <h3 style="color: rgb(255, 153, 0)"><b> You have no transactions.</b></h3>
+        <br><br>
+        <div class="col-md-auto">
+            <a href="/products"> <button class="btn btn-dark" type="submit">Shop Now!</button></a>
+        </div>
+        <br><br>
+    </div>
+@else
     <h3 style="text-align: center"><b>Transaction History</b></h3>
     <br>
     <table  class="table table-bordered" style="text-align: center">
@@ -26,7 +43,7 @@
         </tbody>
     </table>
 
-
+@endif
 
 </div>
 

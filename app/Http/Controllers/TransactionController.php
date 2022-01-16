@@ -101,8 +101,10 @@ class TransactionController extends Controller
     public function viewHistory(){
 
         $Transactions = Transaction::where('users_id', Auth()->user()->id)->get();
+        $size = sizeof($Transactions);
 
         return view('history')
-        ->with('Transactions', $Transactions);
+        ->with('Transactions', $Transactions)
+        ->with('size', $size);
     }
 }

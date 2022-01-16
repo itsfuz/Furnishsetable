@@ -2,7 +2,23 @@
 
 @section('content')
 
-<div class="container" style="">
+@if (session()->has('notification'))
+<br>
+    <div classs="container p-5">
+        <div class="row no-gutters fixed-top justify-content-center">
+            <div class="col-lg-6 col-md-12 m-auto">
+                <div class="alert alert-success fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="True">&times;</span>
+                      </button>
+                     <h4 class="alert-heading" style="text-align: center">{{ session('notification') }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
+<div class="container">
     <div class="productNavbar">
         <div class="row" style="padding:5px; border-bottom: 1px solid black; display:flex;">
             <div class="col">
@@ -34,8 +50,8 @@
                     <br>
                     <h5><a id="linkDetail" href="/productDetail/{{$products[$i]['id']}}">{{$products[$i]['product_name']}}</a></h5>
                     <br>
-                    <h6>Price: Rp. {{$products[$i]['product_price']}}</h6>
-                    <h6>Category: {{$products[$i]['product_category']}}</h6>
+                    <h6>Rp. {{$products[$i]['product_price']}}</h6>
+                    <h6>{{$products[$i]['color']}}</h6>
                     <br>
                     @auth()
                     @if (auth()->user()->id != null)
