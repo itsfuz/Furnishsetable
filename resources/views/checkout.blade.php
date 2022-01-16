@@ -80,13 +80,14 @@
                             @enderror
                     </div>
                     <br>
-                </form>
+                    {{-- /form tadinya disini --}}
             </div>
         </div>
         <br>
         <div class="col-md-auto">
           <button type="submit" class="btn btn-dark">Checkout</button>
         </div>
+    </form>
     </div>
     <br>
     <br>

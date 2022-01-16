@@ -20,6 +20,7 @@ class CreateCartsTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
+            $table->integer('price');
             $table->integer('quantity');
             $table->string('image');
             $table->integer('subtotal');
