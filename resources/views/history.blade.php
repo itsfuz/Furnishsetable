@@ -6,11 +6,11 @@
 <div class="container"  style="align-items:center;  justify-content:center; display:flex">
     @if ($size == null)
 
-    <div class="card" style="align-items: center; width:1000px; box-shadow: 5px 5px 10px grey">
+    <div class="card" style="align-items: center; width:1000px;">
         <br><br><br>
         <img src="{{asset('images/no-transaction.png')}}" style="width: 250px"/>
         <br>
-        <h3 style="color: rgb(255, 153, 0)"><b> You have no transactions.</b></h3>
+        <h3 style="color: rgb(255, 153, 0)">You have no transactions.</h3>
         <br><br>
         <div class="col-md-auto">
             <a href="/products"> <button class="btn btn-dark" type="submit">Shop Now!</button></a>

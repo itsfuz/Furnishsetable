@@ -49,28 +49,34 @@
 
             </div>
         </div>
-        <br><br>
-        <h1 style="text-align: center">Our Collection</h1>
-        <div  class="row" style="">
-            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
-                <img src="{{asset('images/living-room.jpg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
-
-                <h6>Living Room</h6>
+        <br><br><br><br><br>
+        <div class="collection">
+            <h1 style="text-align: center;font-family: 'Raleway', sans-serif;">OUR COLLECTION</h1> <br>
+            <div  class="row" style="">
+                <div class="col" id="collection" style="width: 300px; height: 400px; background-color:sandybrown ; text-align:center; padding-top:10px; border-radius:5px; margin:10px">
+                    <img src="{{asset('images/living-room.jpg')}}" alt="" style="width: 280px; height: 300px;object-fit: cover;">
+                    <br><br>
+                    <h5><a href="/LivingRoomProducts/1">Living Room</a></h5>
+                </div>
+                <div class="col" style="width: 300px; height: 400px; background-color:sandybrown ; text-align:center; padding-top:10px; border-radius:5px; margin:10px">
+                    <img src="{{asset('images/bedroom.jpg')}}" alt="" style="width: 280px; height: 300px;object-fit: coverl;">
+                    <br><br>
+                    <h5><a href="/BedroomProducts/2">Bedroom</a></h5>
+                </div>
+                <div class="col" style="width: 300px; height: 400px; background-color:sandybrown ; text-align:center; padding-top:10px; border-radius:5px; margin:10px">
+                    <img src="{{asset('images/kitchen.jpeg')}}" alt="" style="width: 280px; height: 300px; object-fit: cover;">
+                    <br><br>
+                    <h5><a href="/KitchenProducts/3">Kitchen</a></h5>
+                </div>
+                <div class="col" style="width: 300px; height: 400px;background-color:sandybrown ; text-align:center; padding-top:10px; border-radius:5px; margin:10px">
+                    <img src="{{asset('images/bathroom.jpeg')}}" alt="" style="width: 280px; height: 300px;object-fit: cover;">
+                    <br><br>
+                    <h5><a href="/BathroomProducts/4">Bathroom</a></h5>
+                </div>
             </div>
-            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
-                <img src="{{asset('images/bedroom.jpg')}}" alt="" style="width: 200px; height: 300px;object-fit: coverl;">
-                <h6>Bedroom</h6>
-            </div>
-            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
-                <img src="{{asset('images/kitchen.jpeg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
-                <h6>Kitchen</h6>
-            </div>
-            <div class="col" style="width: 300px; height: 300px;background-color:sandybrown ; text-align:center;">
-                <img src="{{asset('images/bathroom.jpeg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
-                <h6>Bathroom</h6>
-            </div>
+            <br><br><br><br>
         </div>
-        <br><br>
+
     </div>
 </div>
 
