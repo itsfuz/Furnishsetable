@@ -31,6 +31,7 @@
                     <br>
                 </div>
                 <div class="col-md-2">
+                    <h6>Product ID: {{$products->id}}</h6>
                     <h6>Rp. {{$products->price}}</h6>
                     <h6>Color: {{$products->color}}</h6>
                     <h6>{{$products->categoryName}}</h6>
