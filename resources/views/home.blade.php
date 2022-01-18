@@ -7,7 +7,7 @@
     <div class="col-md-auto">
         <div class="card" style="width: 820px; height: 500px;" >
             <div class="card-header  text-center">
-                <h1 style="color:Tomato;"><b>On Sale!</b></h1>
+                <h1 style="color:sandybrown;"><b>On Sale!</b></h1>
             </div>
             <div class="slider">
                 <div class="slides">
@@ -19,16 +19,16 @@
 
                     <!--image-->
                     <div class="slide first">
-                        <img src="{{asset('images/example1.jpg')}}" alt="">
+                        <img src="{{asset('images/home1.jpg')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/example1.jpg')}}" alt="">
+                        <img src="{{asset('images/home2.jpg')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/example1.jpg')}}" alt="">
+                        <img src="{{asset('images/home3.png')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/example1.jpg')}}" alt="">
+                        <img src="{{asset('images/home4.jpeg')}}" alt="">
                     </div>
 
                     <!--automatic nav-->
@@ -50,8 +50,6 @@
 
             </div>
         </div>
-
-
 
     </div>
 </div>
