@@ -128,7 +128,7 @@ class ProductController extends Controller
             $products[0]['color'] = 'none';
             $products[0]['image'] = 'none';
 
-            return view('search')
+            return view('product')
             ->with('products', $products)
             ->with('counter', $counter);
         }
