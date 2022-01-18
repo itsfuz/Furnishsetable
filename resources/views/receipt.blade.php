@@ -22,7 +22,7 @@
             <thead>
               <tr>
                 <th scope="col">Product Name</th>
-                <th scope="col">Quantity</th>
+                <th scope="col" style="text-align: center">Quantity</th>
                 <th scope="col" style="text-align: center">Price</th>
                 <th scope="col" style="text-align: right">Subtotal</th>
               </tr>
@@ -31,8 +31,8 @@
                 @foreach ($TD as $detail)
                 <tr>
                     <td  scope="col">{{$detail->product_name}}</td>
-                    <td  scope="col">{{$detail->price}}</td>
                     <td  scope="col" style="text-align: center">{{$detail->quantity}}</td>
+                    <td  scope="col" style="text-align: center">{{$detail->price}}</td>
                     <td  scope="col" style="text-align: right">{{$detail->subtotal}}</td>
 
                 </tr>
