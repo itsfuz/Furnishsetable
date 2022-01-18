@@ -147,13 +147,13 @@ ul ul a{
 
   /* HOME SLIDER */
 
-
-  
 .slider{
-    width: 800px;
+    width: 1300px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .slides{
@@ -172,8 +172,9 @@ ul ul a{
 }
 
 .slide img{
-    width: 800px;
-    height: 500px;
+    /* width: 1000px;
+    height: 500px; */
+    display: flex;
 }
 
 /*manual nav*/
@@ -191,6 +192,7 @@ ul ul a{
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+    justify-content: center;
 }
 
 .manual-button:not(:last-child){

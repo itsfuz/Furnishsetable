@@ -4,31 +4,30 @@
 
 <div class="container" style="display: flex;justify-content:center">
 
-    <div class="col-md-auto">
-        <div class="card" style="width: 820px; height: 500px;" >
-            <div class="card-header  text-center">
-                <h1 style="color:sandybrown;"><b>On Sale!</b></h1>
-            </div>
+    <div class="col">
+        <div>
             <div class="slider">
                 <div class="slides">
                     <!--button-->
-                    <input type="radio" name="radio-button" id="radio1">
-                    <input type="radio" name="radio-button" id="radio2">
-                    <input type="radio" name="radio-button" id="radio3">
-                    <input type="radio" name="radio-button" id="radio4">
+
+                        <input type="radio" name="radio-button" id="radio1">
+                        <input type="radio" name="radio-button" id="radio2">
+                        <input type="radio" name="radio-button" id="radio3">
+                        <input type="radio" name="radio-button" id="radio4">
+
 
                     <!--image-->
                     <div class="slide first">
-                        <img src="{{asset('images/home1.jpg')}}" alt="">
+                        <img src="{{asset('images/homepage1.png')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/home2.jpg')}}" alt="">
+                        <img src="{{asset('images/homepage2.png')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/home3.png')}}" alt="">
+                        <img src="{{asset('images/homepage3.png')}}" alt="">
                     </div>
                     <div class="slide">
-                        <img src="{{asset('images/home4.jpeg')}}" alt="">
+                        <img src="{{asset('images/homepage4.png')}}" alt="">
                     </div>
 
                     <!--automatic nav-->
@@ -41,7 +40,7 @@
                 </div>
 
                 <!--manual nav-->
-                <div class="manual-nav">
+                <div class="manual-nav"  style="display:flex; justify-content:center">
                     <label for="radio1" class="manual-button"></label>
                     <label for="radio2" class="manual-button"></label>
                     <label for="radio3" class="manual-button"></label>
@@ -50,7 +49,28 @@
 
             </div>
         </div>
+        <br><br>
+        <h1 style="text-align: center">Our Collection</h1>
+        <div  class="row" style="">
+            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
+                <img src="{{asset('images/living-room.jpg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
 
+                <h6>Living Room</h6>
+            </div>
+            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
+                <img src="{{asset('images/bedroom.jpg')}}" alt="" style="width: 200px; height: 300px;object-fit: coverl;">
+                <h6>Bedroom</h6>
+            </div>
+            <div class="col" style="width: 300px; height: 300px; background-color:sandybrown ; text-align:center;">
+                <img src="{{asset('images/kitchen.jpeg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
+                <h6>Kitchen</h6>
+            </div>
+            <div class="col" style="width: 300px; height: 300px;background-color:sandybrown ; text-align:center;">
+                <img src="{{asset('images/bathroom.jpeg')}}" alt="" style="width: 200px; height: 300px;object-fit: cover;">
+                <h6>Bathroom</h6>
+            </div>
+        </div>
+        <br><br>
     </div>
 </div>
 
