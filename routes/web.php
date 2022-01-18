@@ -25,43 +25,32 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'home']);
-
 Route::get('/register', [UserController::class, 'goToRegisterPage']);
 
 Route::post('/UserRegistration', [UserController::class, 'RegisterAccount']);
 
 Route::get('/login', [UserController::class, 'goToLoginPage']);
-
 Route::get('/logout', [UserController::class, 'Logout']);
 
 Route::post('/userlogin', [UserController::class, 'UserLogin']);
 
 Route::get('/products', [ProductController::class, 'goToProductPage']);
-
 Route::get('/LivingRoomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
-
 Route::get('/BedroomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
-
 Route::get('/KitchenProducts/{id}', [ProductController::class, 'CategorizedProducts']);
-
 Route::get('/BathroomProducts/{id}', [ProductController::class, 'CategorizedProducts']);
-
 Route::get('/OthersProducts/{id}', [ProductController::class, 'CategorizedProducts']);
 
 Route::get('/addToCart/{id}', [CartController::class, 'addToCart']);
-
 Route::get('/cart/{id}', [CartController::class, 'viewCart']);
-
 Route::get('/addQuantity/{id}', [CartController::class, 'addQuantity']);
-
 Route::get('/minusQuantity/{id}', [CartController::class, 'minusQuantity']);
-
 Route::get('/productDetail/{id}', [ProductController::class, 'productDetails']);
 
 Route::get('/goToCheckout/{id}', [CartController::class, 'goToCheckoutPage']);
-
 Route::post('/checkout', [TransactionController::class, 'createTransaction']);
 
+Route::get('/searchbyID', [ProductController::class, 'searchID']);
 Route::post('/searchbyID', [ProductController::class, 'searchID']);
 
 Route::get('/contact', [HomeController::class, 'contact']);

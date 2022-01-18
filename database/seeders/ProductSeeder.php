@@ -45,7 +45,7 @@ class ProductSeeder extends Seeder
             [
                 'product_name' => 'Towel Holder',
                 'category_id' => 4,
-                'color' => 'Army Green',
+                'color' => 'Silver',
                 'image' => 'product-image/example4.jpg',
                 'price' => 10000,
                 'description' => 'Size: 112x56x139 cm'
