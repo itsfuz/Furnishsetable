@@ -12,8 +12,9 @@
 
     <div style="padding: 50px">
         <div class="form-floating" style="width: 500px; justify-content:center">
-            <input type="username" name="username" class="form-control  @error('username') is-invalid @enderror" id="floatingInput" placeholder="poop123" required autocomplete="username" autofocus>
+
             <label for="floatingInput">Username</label>
+            <input type="username" name="username" class="form-control  @error('username') is-invalid @enderror" id="floatingInput" placeholder="poop123" required autocomplete="username" autofocus>
               @error('username')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -23,8 +24,9 @@
 
           <br>
           <div class="form-floating"  style="width: 500px;  justify-content:center">
-            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
+            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password" required>
+
               @error('password')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
